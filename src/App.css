@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+
+body {
+  background-color: rgb(240, 220, 200);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'Offside', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3, h5 {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-poster {
+  margin: 8px;
+  height: 35vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+  position: relative;
+  transition: .6s;
+}
+
+.card-poster:hover {
+  cursor: pointer;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, .6);
+  transition: .3s;
+}
+
+.card-poster-text {
+  position: absolute;
+  width: 100%;
+
+  border-radius: 16px 16px 0 0;
   color: white;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0) 60%);
+  padding: 16px 16px 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.card-poster-text > h4 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.image-show {
+  width: 95%;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.details-container {
+  padding: 32px;
+  background-color: rgba(60, 50, 50, .7);
+  color: white;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, .3);
+  height: fit-content;
+}
+
+.bg-overlay {
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width:  100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#video-bg {
+  z-index: -2;
+  height: 350vh;
+  width:  350vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.watermark {
+  color: white;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  opacity: .25;
+}
+
+.watermark:hover {
+  opacity: 1;
+}
+
+.cards::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* grids */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+/* // Smallest device */
+@media (min-width: 100px) and (max-width: 675px) {
+  .cards {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-poster {
+    height: 20vh;
+  }
+
+  .card-poster-text {
+    padding: 16px 16px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 675px) {
+  .cards {
+    grid-template-columns: 1fr;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #video-bg {
+    height: 150vh;
+    width: 150vw;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #video-bg {
+    height: 150vh;
+    width: 150vw;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 1150px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  #video-bg {
+    height: 150vh;
+    width: 150vw;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 110vh;
+    overflow-y: hidden;
+  }
+
+  .main-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #video-bg {
+    height: 150vh;
+    width: 150vw;
   }
 }
