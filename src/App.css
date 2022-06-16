@@ -150,6 +150,7 @@ h3, h5 {
 @media (min-width: 900px) {
   .cards {
     grid-template-columns: 1fr 1fr;
+    height: 900px;
   }
 
   .main-grid {
