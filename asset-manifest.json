@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-binge-watcher/static/css/main.5d66cf69.css",
-    "main.js": "/react-binge-watcher/static/js/main.82d6864e.js",
+    "main.js": "/react-binge-watcher/static/js/main.b50a0f57.js",
     "static/js/787.b701888c.chunk.js": "/react-binge-watcher/static/js/787.b701888c.chunk.js",
     "index.html": "/react-binge-watcher/index.html",
     "main.5d66cf69.css.map": "/react-binge-watcher/static/css/main.5d66cf69.css.map",
-    "main.82d6864e.js.map": "/react-binge-watcher/static/js/main.82d6864e.js.map",
+    "main.b50a0f57.js.map": "/react-binge-watcher/static/js/main.b50a0f57.js.map",
     "787.b701888c.chunk.js.map": "/react-binge-watcher/static/js/787.b701888c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d66cf69.css",
-    "static/js/main.82d6864e.js"
+    "static/js/main.b50a0f57.js"
   ]
 }
