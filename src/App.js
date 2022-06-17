@@ -10,7 +10,7 @@ import MovieDetails from './components/MovieDetails';
 // OMDB key API
 // eb86ca7
 
-const API_URL = "http://www.omdbapi.com?apikey=eb86ca7";
+const API_URL = "https://www.omdbapi.com?apikey=eb86ca7";
 
 const initialMovies = [
   {
@@ -168,7 +168,7 @@ const App = () => {
         </div>
       </div>
       <div className='details-container' id='show-details'>
-        { selectedMovie ? <MovieDetails movie={selectedMovie} keyURL={keyURL} clear={clear} /> : '' }
+        <MovieDetails movie={selectedMovie} keyURL={keyURL} clear={clear} />
       </div>
       <small className='watermark'> This page was created by <a className='text-decoration-none' href="https://github.com/ctyamashita" target='_blank' rel="noreferrer">Celso Yamashita</a></small>
     </div>
