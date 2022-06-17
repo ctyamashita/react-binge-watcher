@@ -168,7 +168,7 @@ const App = () => {
         </div>
       </div>
       <div className='details-container' id='show-details'>
-        <MovieDetails movie={selectedMovie} keyURL={keyURL} clear={clear} />
+        { selectedMovie ? <MovieDetails movie={selectedMovie} keyURL={keyURL} clear={clear} />  : '' }
       </div>
       <small className='watermark'> This page was created by <a className='text-decoration-none' href="https://github.com/ctyamashita" target='_blank' rel="noreferrer">Celso Yamashita</a></small>
     </div>
